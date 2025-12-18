@@ -10,7 +10,8 @@ import sys
 from pathlib import Path
 
 # Игнорируемые папки (не включаем в список документов)
-IGNORE_FOLDERS = {'docs', '.git', '__pycache__', 'scripts', 'node_modules', 'venv'}
+# Добавляем `css`, `js`, `images` потому что они находятся в `docs/`
+IGNORE_FOLDERS = {'docs', '.git', '__pycache__', 'scripts', 'node_modules', 'venv', 'css', 'js', 'images'}
 
 # Расширения файлов и их типы
 FILE_TYPES = {
@@ -94,10 +95,14 @@ def main():
     # Текущая рабочая директория
     current_dir = os.path.dirname(os.path.abspath(__file__))
     
-    print(f"Сканируем директорию: {current_dir}")
-    
-    # Сканируем структуру документов
-    folders = scan_directory(current_dir)
+    # Если есть папка `docs/`, используем ее как корень сайта и сканируем её
+    # (в GitHub Pages папка `docs/` становится корнем сайта).
+    site_root = os.path.join(current_dir, 'docs') if os.path.isdir(os.path.join(current_dir, 'docs')) else current_dir
+
+    print(f"Сканируем директорию: {site_root}")
+
+    # Сканируем структуру документов (папки с документами должны находиться в site_root)
+    folders = scan_directory(site_root)
     
     # Создаем итоговую структуру
     data = {
