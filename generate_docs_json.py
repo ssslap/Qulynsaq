@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Скрипт для генерации JSON структуры документов детского сада "Құлыншақ 2019".
-Создает файл web/js/documents.json с информацией о папках и файлах.
+Создает файл docs/js/documents.json с информацией о папках и файлах.
 """
 
 import os
@@ -10,7 +10,7 @@ import sys
 from pathlib import Path
 
 # Игнорируемые папки (не включаем в список документов)
-IGNORE_FOLDERS = {'web', '.git', '__pycache__', 'scripts', 'node_modules', 'venv'}
+IGNORE_FOLDERS = {'docs', '.git', '__pycache__', 'scripts', 'node_modules', 'venv'}
 
 # Расширения файлов и их типы
 FILE_TYPES = {
@@ -64,7 +64,7 @@ def scan_directory(root_dir):
                         
                         file_data = {
                             'name': file_item,
-                            'path': f"docs/{item}/{file_item}",
+                            'path': f"docs/docs/{item}/{file_item}",
                             'type': file_type,
                             'size': os.path.getsize(file_path)
                         }
@@ -105,7 +105,7 @@ def main():
     }
     
     # Путь для сохранения JSON
-    output_dir = os.path.join(current_dir, 'web', 'js')
+    output_dir = os.path.join(current_dir, 'docs', 'js')
     os.makedirs(output_dir, exist_ok=True)
     output_path = os.path.join(output_dir, 'documents.json')
     
