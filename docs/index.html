@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЖШС "Құлыншақ 2019" бөбекжай балабақшасы</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><i class="fas fa-child"></i> Құлыншақ 2019</h1>
+                    <p class="subtitle">ЖШС "Құлыншақ 2019" бөбекжай балабақшасы</p>
+                </div>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="#about"><i class="fas fa-info-circle"></i> Біз туралы</a></li>
+                        <li><a href="#documents"><i class="fas fa-folder-open"></i> Құжаттар</a></li>
+                        <li><a href="#video"><i class="fas fa-video"></i> Видео</a></li>
+                        <li><a href="#contact"><i class="fas fa-map-marker-alt"></i> Байланыс</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="about" class="section">
+            <h2><i class="fas fa-school"></i> Балабақша туралы</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p><strong>ЖШС "Құлыншақ 2019" бөбекжай балабақшасы</strong> (ТОО "Кулыншак 2019" ясли-сад) балалардың дамуы мен тәрбиесіне арналған заманауи мекеме.</p>
+                    <p>Біздің миссиямыз – әрбір баланың дамуына қолдау көрсетіп, олардың қабілеттерін дамыту және балалардың қауіпсіз және жылы ортада өсуін қамтамасыз ету.</p>
+                </div>
+                <div class="about-details">
+                    <div class="detail-card">
+                        <i class="fas fa-map-pin"></i>
+                        <h3>Мекен-жайы</h3>
+                        <p>Алматы облысы, Еңбекшіқазақ ауданы, Талдыбұлақ ауылы, Жаманғараев көшесі 77А</p>
+                    </div>
+                    <div class="detail-card">
+                        <i class="fas fa-language"></i>
+                        <h3>Тілі</h3>
+                        <p>Қазақ тілі</p>
+                    </div>
+                    <div class="detail-card">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h3>Жұмыс жылдары</h3>
+                        <p>2019 жылдан бастап</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="documents" class="section">
+            <h2><i class="fas fa-archive"></i> Құжаттар қоры</h2>
+            <p class="section-description">Төменде балабақшаның құжаттарының санаттары берілген. Әрбір санатты ашып, қажетті құжатты көре аласыз.</p>
+            
+            <div class="documents-container">
+                <!-- Document categories will be loaded by JavaScript -->
+                <div id="folders-list" class="folders-grid">
+                    <!-- Folders will be dynamically inserted here -->
+                </div>
+                <div id="files-view" class="files-view" style="display: none;">
+                    <div class="files-header">
+                        <button id="back-button" class="back-button"><i class="fas fa-arrow-left"></i> Артқа</button>
+                        <h3 id="current-folder-name"></h3>
+                    </div>
+                    <div id="files-list" class="files-grid">
+                        <!-- Files will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="video" class="section">
+            <h2><i class="fas fa-video"></i> Бейнематериалдар</h2>
+            <div class="video-content" style="text-align: center; padding: 20px; background-color: #f9f9f9; border-radius: 8px; margin-top: 20px;">
+                <p style="margin-bottom: 15px; font-size: 1.1em;">Балабақша өмірінен бейнематериалдарды төмендегі сілтеме арқылы көре аласыз:</p>
+                <a href="https://drive.google.com/drive/folders/1LuCJ3R5m9Z_m_UeOC3Oo5okjGSv1xjW3?usp=drive_link" target="_blank" class="download-button" style="display: inline-block; text-decoration: none; color: white; background-color: #4CAF50; padding: 10px 20px; border-radius: 5px;">
+                    <i class="fab fa-google-drive"></i> Бейне мұрағатты ашу
+                </a>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2><i class="fas fa-address-book"></i> Байланыс ақпараты</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marked-alt"></i> <strong>Адрес:</strong> Алматы облысы, Еңбекшіқазақ ауданы, Талдыбұлақ ауылы, Жаманғараев көшесі 77А</p>
+                    <p><i class="fas fa-phone"></i> <strong>Телефон:</strong> 87072080281, 87476219787</p>
+                    <p><i class="fas fa-envelope"></i> <strong>Электронды пошта:</strong> sandu-hanym@mail.ru</p>
+                    <p><i class="fas fa-clock"></i> <strong>Жұмыс уақыты:</strong> Дүйсенбі - Жұма, 08:00 - 18:00</p>
+                </div>
+                <div class="map-placeholder">
+                    <div class="map-image">
+                        <i class="fas fa-map"></i>
+                        <p>Карта</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3><i class="fas fa-child"></i> Құлыншақ 2019</h3>
+                    <p>Балалардың болашағы біздің қолымызда!</p>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2025 ЖШС "Құлыншақ 2019" бөбекжай балабақшасы. Барлық құқықтар қорғалған.</p>
+                    <p>Бұл веб-сайт құжаттарды сақтау және тарату үшін жасалған.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Document Viewer Modal -->
+    <div id="document-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Құжатты көру</h3>
+                <button id="close-modal" class="close-button"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div id="viewer-container">
+                    <!-- PDF viewer or image viewer will be inserted here -->
+                    <iframe id="pdf-viewer" style="display: none; width: 100%; height: 500px;"></iframe>
+                    <img id="image-viewer" style="display: none; max-width: 100%; max-height: 500px;">
+                    <div id="unsupported-viewer" style="display: none;">
+                        <p>Бұл құжатты браузерде тікелей көру мүмкін емес. Төмендегі батырманы басу арқылы жүктеп алыңыз.</p>
+                        <a id="download-link" class="download-button" download><i class="fas fa-download"></i> Құжатты жүктеу</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
